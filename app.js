@@ -19,6 +19,6 @@ app.use(express.json());
 const employeesRouter = require('./routes/employees')
 app.use('/employees',employeesRouter)
 
-app.listen(5000,function(){
+app.listen(process.env.PORT || 5000,function(){
     console.log('Server Started');
 })
